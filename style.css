@@ -1,0 +1,320 @@
+body {
+    background-image: url(image/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;          /* дэлгэцийг дүүргэнэ */
+    background-position: center;     /* төв дээр байрлуулах */
+    background-attachment: fixed;    /* скролл болгонд фон тогтмол харагдана */
+}
+.flex {
+    display: flex;
+    border-radius: 50px;
+}
+
+
+
+.border {
+    border: 1px solid red;
+}
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 80px;
+    font-size: 20px;       /*usgiin hemjee*/
+    font-style: normal;
+    font-weight: 500;
+}
+.nav-menu a {
+  color: white; 
+  text-decoration: none;
+}
+.nav-menu a::after {
+ content: '';
+  width: 0;
+  height: 2px;
+  background: #d1b272;
+  display: block;
+  transition: 0.2s linear;
+}
+.nav-menu a:hover::after{
+    width: 100%;
+}
+.nav-menu a:hover{
+    color: #d1b272;
+}
+section h3{
+    color: #d1b272;
+    font-size: 90px;
+    margin-top: 80px;
+    margin-right: 670px;
+    margin-left: 50px;
+}
+section p{
+    color: white;
+    font-size: 25px;
+    margin-top: 10px;
+    margin-right: 650px;
+    margin-left: 50px;
+}
+h3 {
+    line-height: 1.1;  
+    margin-bottom: 20px; 
+}
+p {
+    line-height: 1.5; 
+    margin-top: 0;     
+}
+.songolt {
+    margin-bottom: 60px;
+    margin-top: 50px;
+    transition: 0.3s;
+}
+.songolt1, .songolt2 {
+    color: white;
+    font-size: 19px;
+    padding: 10px;
+    border: 1px solid white;
+    width: 130px;         
+    display: inline-block; 
+    margin-left: 50px;      /* зүүнээс зай */
+    margin-right: 2px;     /* хоорондын зай */
+}
+.songolt1:hover, .songolt2:hover{
+background-color: #d1b272;
+}
+.stats {
+  display: flex;          /* мөрөнд байрлуулна */
+  justify-content: flex-start; /* зүүнээс эхэлнэ */
+  gap: 80px;              /* элементүүдийн хооронд зай */
+  margin-bottom: 40px;    /* доод талын зай */
+  margin-left: 50px;
+}
+.stat {
+  text-align: center;     /* тоо ба тайлбарыг төвлөрүүлнэ */
+}
+.stat-number {
+  color: #d1b272;
+  font-size: 40px;
+}
+.stat-label {
+  color: white;
+  font-size: 25px;
+  margin-top: 10px;       /* тооны доор зай */
+}
+
+/*story*/
+
+.story{
+    width: 100%;
+    height: 100vh;
+    padding: 70px 0;
+    color: white;
+}
+.story .story_main{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.story .story_main .image img{
+    width: 600px;
+    position: relative;
+    top: 60px;
+}
+.story .story_main .story_text h1{
+    color: #d1b272;
+    margin-right: 15px;
+    font-size: 55px;
+    position: relative;
+    bottom: 30px;
+}
+.story .story_main .story_text h3{
+    font-size: 30px;
+    margin: 0 0 50px 0;
+}
+.story .story_main .story_text p{
+    width: 750px;
+    text-align: justify;
+    margin-right: 30px;
+    line-height: 22px;
+}
+.story .story_btn{
+    background: #d1b272;
+    padding: 12px 25px;
+    text-decoration: none;
+    color: white;
+    position: relative;
+    left: 46%;
+    bottom: 5px;
+}
+
+/*characters*/ 
+.characters{
+    width: 100%; /* Өргөнийг дэлгэцийн 100% болгож тохируулсан */
+}
+.characters h1{
+    color: #d1b272; /* Гарчгийн өнгө алтлаг хүрэн */
+    font-size: 55px; /* Гарчгийн үсгийн хэмжээ 55px */
+    display: flex; /* Flexbox ашигласан */
+    align-items: center; /* Текст босоо чиглэлд төвд байрлана */
+    justify-content: center; /* Текстийг хэвтээ чиглэлд төвд байрлуулна */
+    margin-bottom: 30px; /* Доороо 30px зай авна */
+}
+.characters .character_container{
+    width: 95%; /* Контейнерийн өргөн 95% */
+    margin: 0 auto; /* Төвд байрлуулах */
+    display: grid; /* Grid layout ашигласан (flex бас хэрэглэж болно) */
+    grid-template-columns: repeat(4, 1fr); /* 4 багана үүсгэж 4 зураг зэрэгцүүлнэ */
+    gap: 20px; /* Багануудын хоорондын зай 20px */
+    justify-items: center; /* Grid доторх box-уудыг төвд байрлуулна */
+}
+.characters .character_box{
+    width: 325px; /* Box-ийн өргөн */
+    height: 480px; /* Box-ийн өндөр */
+    padding-top: 10px; /* Дээд талаас 10px доторлох */
+    margin-bottom: 20px; /* Доор 20px зай авах */
+    box-shadow: 0 0 10px white; /* Цагаан сүүдэр нэмсэн */
+}
+.characters .character_box .character_image img{
+    width: 100%; /* Зургийн өргөн box-ийн өргөнд таарна */
+    height: 360px; /* Зургийн өндөр 360px */
+    object-fit: cover; /* Зургийг box-д багтааж хэрчиж харуулна */
+    object-position: center; /* Зургийг төвөөс харуулна */
+}
+.character_info h2{
+    color: white; /* Дүрийн нэрийг цагаан өнгөөр харуулна */
+    text-align: center; /* Текстийг төвд байрлуулна */
+}
+.character_btn{
+    display: flex; /* Flexbox ашигласан */
+    align-items: center; /* Товчны текст босоогоор төвд байрлана */
+    justify-content: center; /* Текст хэвтээ чиглэлд төвд байрлана */
+    text-decoration: none; /* Доогуур зураас арилгана */
+    color: black; /* Текстийн өнгө хар */
+    background: #d1b272; /* Арын өнгө алтлаг хүрэн */
+    padding: 8px 10px; /* Доторлогоо: дээр/доор 8px, баруун/зүүн 10px */
+    margin: 0 80px; /* Хажуу талаас 80px зай авна */
+}
+
+/*spell*/
+
+.spell{
+    width: 100%;
+}
+.spell h1{
+    color: #d1b272;
+    font-size: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+.spell .spell_container{
+    width: 95%;
+    margin: 0 auto;
+    display: grid; /* эсвэл flex */
+    grid-template-columns: repeat(5, 1fr); /* 4 зураг зэрэгцүүлнэ */
+    gap: 30px;
+    justify-items: center;
+}
+.spell .spell_box{
+    width: 250px;
+    height: 300px;
+    padding-top: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px white;
+}
+.spell .spell_box .spell_image img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+}
+.spell_info h2{
+    color: white;
+    text-align: center;
+}
+.spell_btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+    background: #d1b272;
+    padding: 8px 10px;
+    margin: 0 80px;
+}
+
+/*houses*/
+
+.houses{
+    width: 100%;
+    padding: 70px 0;
+}
+.houses h1{
+    color: #d1b272;
+    font-size: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.houses .houses_image_box{
+    width: 95%;
+    margin: 10px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+}
+.houses .houses_image_box .houses_image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: black;
+}
+.houses .houses_image_box .houses_image img{
+    width: 100%;
+    transition: .3s;
+}
+.houses .houses_image_box .houses_image:hover img{
+opacity: 0.4;
+}
+.houses .houses_image_box .houses_image h3{
+    position: absolute;
+    font-size: 35px;
+    margin-bottom: 130px;
+    color: #d1b272;
+    z-index: 5;
+    opacity: 0;
+    transition: 0.3s;
+}
+.houses .houses_image_box .houses_image:hover h3{
+    opacity: 1;
+}
+.houses .houses_image_box .houses_image p{
+    position: absolute;
+    width: 300px;
+    margin-top: 30px;
+    text-align: center;
+    color: white;
+    line-height: 22px;
+    opacity: 0;
+    z-index: 5;
+    transition: 0.3s;
+}
+.houses .houses_image_box .houses_image:hover p{
+    opacity: 1;
+}
+.houses .houses_image_box .houses_image .houses_btn{
+    position: absolute;
+    margin-top: 180px;
+    color: #000;
+    background: #d1b272;
+    padding: 7px 25px;
+    text-decoration: none;
+    opacity: 0;
+    transform: translateY(45px);
+    z-index: 5;
+    transition: 0.3s;
+}
+.houses .houses_image_box .houses_image:hover .houses_btn{
+    opacity: 1;
+    transform: translateY(0);
+}
